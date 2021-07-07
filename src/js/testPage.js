@@ -203,7 +203,6 @@ class ChoiceButtonContainer{
             const $btn = this.btnList[i];
             $btn.onclick = () => {
                 this.setSelected(i);
-                console.log("select:", i)
             }
         }
     }
