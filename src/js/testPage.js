@@ -153,7 +153,6 @@ class ProblemContainer{
 
     getPoint(){
         let point = 0;
-        console.log(this.answer, this.choiceManager.getSelected());
         if(this.answer === this.choiceManager.getSelected()){
             point = this.point;
         }
@@ -166,7 +165,6 @@ class ProblemContainer{
 
     notifyingSelected(){
         this.testPaper.notifyingSelected();
-        console.log('answer:', this.answer);
     }
 }
 
