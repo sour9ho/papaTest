@@ -15,8 +15,10 @@ export async function testPage(callback){
     $submission.innerText = "제출하기";
 
     const $main = document.getElementById("main");
-    const data = await fetchCsv(filePath);
-    console.log(data);
+    let data = await fetchCsv(filePath);
+    while(data.length > 10){
+        data.pop();
+    }
     const testPaper = new TestPaper(data, $nav, $submission, callback);
     $main.appendChild(testPaper.getTestPaper());
 
